@@ -1,7 +1,6 @@
 // Factorial of a number
 
 #include <stdio.h>
-#include <stdlib.h>
 #include<lpc214x.h>
 
 int main()
