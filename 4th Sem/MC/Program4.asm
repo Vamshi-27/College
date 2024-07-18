@@ -1,0 +1,14 @@
+; ALP to multiply two 16-bit binary numbers
+
+    AREA Multiply,CODE,READONLY
+ENTRY
+    LDRH R1,N1
+    LDRH R2,N2
+    MUL R3,R1,R2
+    LDR R0,PRODUCT
+    STR R3,[R0]
+XS  B   XS
+N1	DCW 5
+N2	DCW 6
+PRODUCT DCD 0X40000000
+	END
