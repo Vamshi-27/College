@@ -1,0 +1,9 @@
+; Lab program 1
+
+    AREA Pgm1,CODE,READONLY
+ENTRY
+    MOV R1,#0X00006400
+    MOV R2,#0X00003200
+    ADD R3,R1,R2
+XS  B   XS
+    END

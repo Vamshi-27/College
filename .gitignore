@@ -1,2 +1,11 @@
 **/*.exe
 **/*.class
+**/*.d
+**/*.o
+**/*.lst
+**/*.lnp
+**/*.htm
+**/*.map
+**/*.axf
+**/*.dep
+**/*.uvproj
