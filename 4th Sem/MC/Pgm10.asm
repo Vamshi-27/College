@@ -1,11 +1,9 @@
 ; Enabling and Disabling the Interrupts in ARM
-
-TIL program to enable I interrupt
-
-    AREA Interrupt, CODE, READONLY
+	TTL program to enable I interrupt
+	AREA Interrupt, CODE, READONLY
 ENTRY
-    MOV R0,CPSR
-    BIC R0,R0,#0x80
-    MOV CPSR_c,R1
+    MRS R1,CPSR
+    BIC R1,R1,#0x80
+    MSR CPSR_c,R1
 XS  B   XS
     END
