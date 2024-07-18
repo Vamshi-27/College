@@ -1,39 +1,66 @@
-// Knapsack 0-1
+// Knapsack using Greedy Algorithm
 
-#include <stdio.h>
+#include<stdio.h>
+#include<stdlib.h>
 
-int max(int a, int b)
+void greedy_knapsack(int n,int m,float p[],float w[])
 {
-    return (a > b) ? a : b;
-}
+    float max,profit=0;
+    int i,k,count;
 
-int knapSack(int W, int wt[], int val[], int n)
-{
-    int i, w;
-    int K[n + 1][W + 1];
-
-    for (i = 0; i <= n; i++)
+    for(count=0;count<n;count++)
     {
-        for (w = 0; w <= W; w++)
+        max=0;
+        for(i=0;i<n;i++)
         {
-            if (i == 0 || w == 0)
-                K[i][w] = 0;
-            else if (wt[i - 1] <= w)
-                K[i][w] = max(val[i - 1] + K[i - 1][w - wt[i - 1]], K[i - 1][w]);
-            else
-                K[i][w] = K[i - 1][w];
+            if((p[i]/w[i])>max)
+            {
+                k=i;
+                max=p[i]/w[i];
+            }
+        }
+        if(w[k]<=m)
+        {
+            printf("Item %d with fraction 1 is selected\n",k);
+            profit += p[k];
+            m -= w[k];
+            p[k]=0;
+        }
+        else
+        {
+            break;
         }
     }
-
-    return K[n][W];
+    printf("Discrete knapsack profit=%f\n",profit);
+    float x=m/w[k];
+    printf("Item %d with fraction %f is selected\n",k,x);
+    profit += p[k]*x;
+    printf("Continous knapsack profit=%f\n",profit);
 }
 
 int main()
 {
-    int val[] = {60, 100, 120};
-    int wt[] = {10, 20, 30};
-    int W = 50;
-    int n = sizeof(val) / sizeof(val[0]);
-    printf("%d", knapSack(W, wt, val, n));
-    return 0;
+    int i,n,m;
+    float *p,*w;
+    printf("Enter the no of items:\n");
+    scanf("%d",&n);
+    printf("Enter the knapsack capacity:\n");
+    scanf("%d",&m);
+
+    p=(float*)malloc(n*sizeof(float));
+    w=(float*)malloc(n*sizeof(float));
+
+    printf("Enter the items:\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%f",&p[i]);
+    }
+    printf("Enter the weights of items:\n");
+    for(i=0;i<n;i++)
+    {
+        scanf("%f",&w[i]);
+    }
+    greedy_knapsack(n,m,p,w);
+    free(p);
+    free(w);
 }
