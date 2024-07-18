@@ -9,3 +9,8 @@
 **/*.axf
 **/*.dep
 **/*.uvproj
+**/*.s
+**/*.crf
+**/*.bak
+**/*.uvgui.Vamshi R A
+**/*.uvopt
