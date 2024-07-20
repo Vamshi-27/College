@@ -15,6 +15,7 @@ class Employee
         id = s.next();
         name = s.next();
         salary = s.nextDouble();
+        s.close();
     }
 
     void display() 
