@@ -1,4 +1,4 @@
-//Write a program for simple RSA algorithm to encrypt and decrypt the data.
+// Write a program for congestion control using leaky bucket algorithm.
 
 import java.util.*;
 
