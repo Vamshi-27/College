@@ -1,0 +1,75 @@
+<!-- Develop HTML page named as “registration.html” having variety of HTML input elements with background 
+colors, table for alignment & provide font colors & size using CSS styles.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Registration form </title>
+    <link rel="stylesheet" href="Style4.css">
+</head>
+<body>
+    <h1> Registration Page </h1>
+    <form method="get" action="#">
+        <table>
+            <tr>
+                <td> <label for="uname"> User Name: </label> </td>
+                <td> <input type="text" id="uname" name="uname" required> </td>
+            </tr>
+
+            <tr>
+                <td> <label for="password"> Password: </label> </td>
+                <td> <input type="password" id="password" name="password" required> </td>
+            </tr>
+
+            <tr>
+                <td> <label for="password"> Confirm Password: </label> </td>
+                <td> <input type="password" id="password" name="password" required> </td>
+            </tr>
+
+            <tr>
+                <td> <label for="dob"> Date of Birth: </label> </td>
+                <td> <input type="date" id="dob" name="dob" required> </td>
+            </tr>
+
+            <tr>
+                <td> <label for="address"> Address: </label> </td>
+                <td> <textarea id="address" name="address" rows="4" ></textarea> </td>
+            </tr>
+                <td> <label for="gender"> Gender: </label> </td>
+                <td> 
+                    <input type="radio" id="Male" name="gender" value="Male"> Male
+                    <input type="radio" id="Female" name="gender" value="Female"> Female
+                    <input type="radio" id="Other" name="gender" value="Other"> Other
+                </td>
+            </tr>
+
+            <tr>
+                <td> <label for="subjects"> Subjects: </label> </td>
+                <td>
+                    <input type="checkbox" id="arts" name="subjects" value="Arts"> Arts <br>
+                    <input type="checkbox" id="science" name="subjects" value="Science"> Science <br>
+                    <input type="checkbox" id="commerce" name="subjects" value="Commerce"> Commerce <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td> <label for="college"> College: </label> </td>
+                <td>
+                    <select id="college" name="college" required>
+                        <option value="college0"> Select </option>
+                        <option value="college1"> Indian Institute of Technology, Bombay </option>
+                        <option value="college2"> Indian Institute of Technology, Madras </option>
+                        <option value="college3"> Indian Institute of Technology, Roorkee </option>
+                        <option value="college4"> Indian Institute of Technology, Kharagpur </option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td> <input type="submit" value="Submit"> </input> </td>
+                <td> <input type="reset" value="Reset"> </input> </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
