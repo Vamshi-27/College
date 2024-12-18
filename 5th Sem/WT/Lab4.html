@@ -35,6 +35,8 @@ colors, table for alignment & provide font colors & size using CSS styles.  -->
                 <td> <label for="address"> Address: </label> </td>
                 <td> <textarea id="address" name="address" rows="4" ></textarea> </td>
             </tr>
+
+            <tr>
                 <td> <label for="gender"> Gender: </label> </td>
                 <td> 
                     <input type="radio" id="Male" name="gender" value="Male"> Male
@@ -66,8 +68,10 @@ colors, table for alignment & provide font colors & size using CSS styles.  -->
             </tr>
 
             <tr>
-                <td> <input type="submit" value="Submit"> </input> </td>
-                <td> <input type="reset" value="Reset"> </input> </td>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
             </tr>
         </table>
     </form>
