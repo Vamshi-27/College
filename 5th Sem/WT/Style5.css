@@ -1,25 +1,54 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: lightgrey;
+  background-color: lightblue;
+  font-family: Times, serif;
 }
-header {
-  background-color: cyan;
-  text-align: center;
-  color: white;
-  padding: 20px 0;
-}
+
 nav {
   text-align: center;
-  margin: 20px;
-  background-color: white;
+  padding: 10px;
 }
+
 nav a {
-  color: #333;
-  margin: 15px;
-  font-weight: bold;
+  color: black;
+  padding: 5px;
 }
+
 nav a:hover {
-  color: cyan;
+  color: white;
+  background-color: blue;
+}
+
+h1 {
+  text-align: center;
+  color: blue;
+}
+
+h2 {
+  color: blue;
+}
+
+section {
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  float: left;
+  width: 56%;
+  height: 500px;
+}
+
+aside {
+  float: right;
+  width: 38%;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  height: 500px;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  padding: 10px;
+  background-color: blue;
+  color: white;
 }
