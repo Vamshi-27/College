@@ -43,5 +43,29 @@
         <div class="animate-box"></div>
     </div>
 
+    <script>
+        $(document).ready(function () {
+            // a. Append content at the end of existing paragraph and list
+            $('#append-to-paragraph').click(function () {
+                $('#paragraph').append(' Appended content!');
+            });
+
+            $('#append-to-list').click(function () {
+                $('#list').append('<li>Appended item</li>');
+            });
+
+            // b. Change the state of the element with CSS style using animate()
+            $('#animate-box').click(function () {
+                $('.animate-box').animate({
+                    width: '200px',
+                    height: '200px',
+                    marginLeft: '50px'
+                }, 1000, function () {
+                    // c. Change the color of the div when the animation is complete
+                    $(this).addClass('highlight');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
