@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Utilities</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    button {
+      margin: 5px 0;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>JSON Utilities</h1>
+  
+  <h2>a) Convert JSON text to JavaScript Object</h2>
+  <textarea id="jsonInput" placeholder="Enter JSON text here"></textarea>
+  <button onclick="convertToObject()">Convert to Object</button>
+
+  <h2>b) Convert JSON result into a Date</h2>
+  <textarea id="jsonDateInput" placeholder='Enter JSON with a date field, e.g., {"date": "2025-01-01"}'></textarea>
+  <button onclick="convertToDate()">Convert Date</button>
+
+  <h2>c) JSON to CSV and CSV to JSON</h2>
+  <textarea id="jsonToCsvInput" placeholder='Enter JSON for conversion, e.g., [{"name":"John","age":30},{"name":"Doe","age":25}]'></textarea>
+  <button onclick="convertToCSV()">Convert JSON to CSV</button>
+  <textarea id="csvInput" placeholder="Enter CSV text here"></textarea>
+  <button onclick="convertToJSON()">Convert CSV to JSON</button>
+
+  <h2>d) Create Hash from String</h2>
+  <input type="text" id="hashInput" placeholder="Enter text to hash" style="width:100%; padding: 10px;">
+  <button onclick="generateHash()">Generate Hash</button>
+
+  <div id="output"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
