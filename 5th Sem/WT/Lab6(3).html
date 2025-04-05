@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Calculator</title>
+    <style>
+      body {
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        display: flex;
+        background-color: #635f55;
+      }
+      .calculator {
+        border-radius: 10px;
+        background-color: #f6f0e1;
+        border-width: 50%;
+        width: 50%;
+        justify-content: center;
+        text-align: center;
+      }
+      input,
+      button {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+      #result {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <h1>Calculator</h1>
+      <input
+        type="number"
+        id="num1"
+        name="num1"
+        placeholder="Enter the first number"
+      /><br /><br />
+      <input
+        type="number"
+        id="num2"
+        name="num2"
+        placeholder="Enter the second number (if required)"
+      /><br /><br />
+
+      <button onclick="calculator('addition')">Addition</button><br /><br />
+      <button onclick="calculator('subtraction')">Subtraction</button
+      ><br /><br />
+      <button onclick="calculator('multiplication')">Multiplication</button
+      ><br /><br />
+      <button onclick="calculator('division')">Division</button><br /><br />
+      <button onclick="calculator('remainder')">Remainder</button><br /><br />
+      <button onclick="calculator('power')">Power</button><br /><br />
+      <button onclick="calculator('square')">Square (First)</button><br /><br />
+      <button onclick="calculator('square-root')">Square-root (First)</button
+      ><br /><br />
+      <div id="result">Result:</div>
+    </div>
+
+    <script>
+      function calculator(operation) {
+        const num1 = parseFloat(document.getElementById('num1').value);
+        const num2 = parseFloat(document.getElementById('num2').value);
+        let result;
+
+        switch(operation) {
+          case 'addition':
+            result = num1 + num2;
+            break;
+          case 'subtraction':
+            result = num1 - num2;
+            break;
+          case 'multiplication':
+            result = num1 * num2;
+            break;
+          case 'division':
+            result = num2 !== 0 ? num1 / num2 : 'Error (Divide by zero)';
+            break;
+          case 'remainder':
+            result = num2 !== 0 ? num1 % num2 : 'Error (Divide by zero)';
+            break;
+          case 'power':
+            result = Math.pow(num1, num2);
+            break;
+          case 'square':
+            result = Math.pow(num1, 2);
+            break;
+          case 'square-root':
+            result = num1 >= 0 ? Math.sqrt(num1) : 'Error (Negative sqrt)';
+            break;
+          default:
+            result = 'Invalid Operation';
+        }
+
+        document.getElementById('result').innerText = `Result: ${result}`;
+      }
+    </script>
+  </body>
+</html>

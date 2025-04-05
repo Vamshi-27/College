@@ -1,0 +1,96 @@
+<!-- Apply HTML, CSS and JavaScript to design a simple calculator to perform the following operations: sum, 
+product, difference, remainder, quotient, power, square-root and square.  -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Calculator </title>
+		<style>
+			body {
+            			font-family: Arial, sans-serif;
+            			text-align: center;
+            			margin-top: 50px;
+           		}
+      			.calculator {
+             			width:300px;
+             			margin: auto;
+             			padding: 20px;
+             			border: 20px solid #ccc;
+            		}
+      			input,button {
+             			margin: 10px;
+             			width:80%;
+             			padding: 5px;
+            		}
+      			button {
+             			background-color:#4CAF50;
+             			border: none;
+             			border-radius: 5px;
+             		}
+
+		</style>
+	</head>
+	<body>
+		<div class="calculator">
+			<h2> Simple Calculator </h2>
+			<input type="number" id="num1" placeholder="Enter first number"><br>
+			<input type="number" id="num2" placeholder="Enter second number (if required) "><br>
+			<button onclick="calculate('sum')"> Sum </button><br>
+			<button onclick="calculate('difference')"> Difference </button><br>
+			<button onclick="calculate('multiply')"> Multiply </button><br>
+			<button onclick="calculate('division')"> Division </button><br>
+			<button onclick="calculate('remainder')"> Remainder </button><br>
+			<button onclick="calculate('power')"> Power </button><br>
+			<button onclick="calculate('squareroot')"> SquareRoot (1st Number)</button><br>
+			<button onclick="calculate('squareroot1')"> SquareRoot (2nd Number)</button><br>
+			<button onclick="calculate('square')"> Square(1st number) </button><br>
+			<button onclick="calculate('square1')"> Square (2nd number) </button><br>
+			<div id="result"> Result: </div>
+		</div>
+		<script>
+			function calculate(operation)
+			{
+				const num1=parseFloat(document.getElementById('num1').value);
+				const num2=parseFloat(document.getElementById('num2').value);
+				let result;
+				switch(operation)
+				{
+					case 'sum':
+						result=num1+num2;
+						break;
+					case 'difference':
+						result=num1-num2;
+						break;
+					case 'multiply':
+						result=num1*num2;
+						break;
+					case 'division':
+						result=num2 !== 0 ? num1/num2 : 'Error (Divide by Zero)';
+						break;
+					case 'remainder':
+						result=num2 !== 0 ? num1%num2 : 'Error (Divide by Zero)';
+						break;
+					case 'power':
+						result=Math.pow(num1,num2);
+						break;
+					case 'squareroot':
+						result=num1 >= 0 ? Math.sqrt(num1) : 'Error (Invalid number)';
+						break;
+					case 'squareroot1':
+						result=num2 >= 0 ? Math.sqrt(num2) : 'Error (Invalid number)';
+						break;
+					case 'square':
+						result=Math.pow(num1,2);
+						break;
+					case 'square1':
+						result=Math.pow(num2,2);
+						break;
+					default:
+						result= "Invalid Operation";
+						break;
+				}
+				document.getElementById('result').innerText = `Result: ${result}`;
+			}
+		</script>
+	</body>
+</html>

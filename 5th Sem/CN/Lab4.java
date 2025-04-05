@@ -1,3 +1,5 @@
+//Develop a program to implement a sliding window protocol in the data link layer.
+
 public class Lab4 {
     private final int windowSize;
     private int sendBase;

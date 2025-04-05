@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CALCULATOR</title>
+    <style>
+      body {
+        background-color: rgb(240, 240, 240);
+      }
+      .calculator {
+        border: 1px solid black;
+        margin-left: 400px;
+        margin-right: 500px;
+        margin-top: 50px;
+        padding: 100px;
+        border-radius: 200px;
+        background-color: white;
+      }
+      label {
+        font-family: arial;
+        font-weight: bold;
+        margin-left: 30px;
+      }
+      button {
+        background-color: #4caf50;
+        margin-left: 40px;
+        margin-top: 5px;
+        padding-left: 10px;
+        padding-right: 30px;
+        color: white;
+        width: 150px;
+        height: 40px;
+      }
+      input {
+        margin-left: 30px;
+      }
+      #result {
+        font-weight: bold;
+        font-style: italic;
+        font-family: arial;
+        margin-left: 70px;
+        margin-top: 20px;
+      }
+      button:hover {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <h1>CALCULATOR</h1>
+      <label for="num1">num 1</label>
+      <br />
+      <input type="number" id="num1" placeholder="enter num1" required />
+      <br />
+      <label for="num2">num 2</label>
+      <br />
+      <input type="number" id="num2" placeholder="enter num2" required />
+      <br />
+      <button onclick="calculate('add')">add</button>
+      <br />
+      <button onclick="calculate('subtract')">subtract</button>
+      <br />
+      <button onclick="calculate('multiply')">multiply</button>
+      <br />
+      <button onclick="calculate('divide')">divide</button>
+      <br />
+      <button onclick="calculate('reminder')">reminder</button>
+      <br />
+      <button onclick="calculate('power')">power</button>
+      <br />
+      <button onclick="calculate('sqroot')">square root(num1)</button>
+      <br />
+      <button onclick="calculate('square')">square(num1)</button>
+      <br />
+      <div id="result">result</div>
+    </div>
+    <script>
+      function calculate(operation) {
+        const num1 = parseFloat(document.getElementById("num1").value);
+        const num2 = parseFloat(document.getElementById("num2").value);
+        let result;
+        switch (operation) {
+          case "add":
+            result = num1 + num2;
+            break;
+          case "subtract":
+            result = num1 - num2;
+            break;
+          case "multiply":
+            result = num1 * num2;
+            break;
+          case "divide":
+            result = num2 !== 0 ? num1 / num2 : "division by 0";
+            break;
+          case "reminder":
+            result = num2 != 0 ? num1 % num2 : "division by 0";
+            break;
+          case "power":
+            result = Math.pow(num1, num2);
+            break;
+          case "sqroot":
+            result = num1 > 0 ? Math.sqrt(num1) : "negative number";
+            break;
+          case "square":
+            result = Math.pow(num1, 2);
+            break;
+          default:
+            result = "invalid operation";
+            break;
+        }
+        document.getElementById("result").innerText = `result: ${result}`;
+      }
+    </script>
+  </body>
+</html>

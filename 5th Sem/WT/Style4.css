@@ -1,0 +1,48 @@
+body {
+    background-color: white;
+    font-family: Times, serif;
+}
+
+h1 {
+    color: blue;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: grey;
+}
+
+td {
+    padding: 10px;
+}
+
+label {
+    color: black;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"],textarea, select {
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+}
+
+input[type="submit"], input[type="reset"] {
+    margin: 10px;
+    color: #555;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: green;
+    color: red;
+}
