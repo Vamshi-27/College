@@ -16,3 +16,14 @@ for i in range(len(a)):
                 h[j] = "?"
 
 print("Final hypothesis:", h)
+
+
+'''
+Data:
+CGPA	Interactiveness	  Practical Knowledge	Communication Skills	Logical Thinking	Interest	Job Offer
+>=9	     Yes	               Excellent	           Good	                Fast	           Yes	       Yes
+>=9	     Yes	                  Good	               Good	                Fast	           Yes	       Yes
+>=8	     No	                      Good	               Good	                Fast	            No	        No
+>=9	     Yes	                  Good	               Good	                Slow	           Yes	       Yes
+
+'''

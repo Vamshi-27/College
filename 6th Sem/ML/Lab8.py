@@ -25,6 +25,6 @@ prediction_class = "Benign" if prediction == 1 else "Malignant"
 print(f"Predicted class for new sample: {prediction_class}")
 
 plt.figure(figsize=(12, 8))
-tree.plot_tree(clf, filled=True, feature_names=df.columns[:-1], class_names=["Malignant", "Benign"])
+tree.plot_tree(clf, filled=True)
 plt.title("Decision Tree - Breast Cancer Dataset")
 plt.show()

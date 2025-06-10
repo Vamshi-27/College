@@ -23,7 +23,6 @@ plt.figure(figsize=(60, 10))
 for i in range(n):
     ax = plt.subplot(1, n, i + 1)
     ax.imshow(x_test[i].reshape(64, 64), cmap='gray')
-    ax.set_title(f"Pred: {y_pred[i]}\nTrue: {y_test[i]}")
     ax.axis('off')
 
 plt.show()
