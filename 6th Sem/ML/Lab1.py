@@ -14,7 +14,7 @@ for i in nf:
 
 for i in nf:
     plt.figure(figsize=(6,3))
-    s.histplot(d[i])
+    s.boxplot(d[i])
     plt.show()
 
 print("Outliers:")
